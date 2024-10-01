@@ -1,0 +1,76 @@
+:root {
+    --main-bg-color: #1e1e24;
+    --primary-color: #49B6FF;
+    --secondary-color: #779BE7;
+    --light-color: #EADEDA;
+}
+  
+body{
+    margin:0;
+    background-color: var(--main-bg-color);
+    color:var(--light-color);
+}
+.logo{
+    padding:10px;
+    font-size:1.8rem;
+}
+.nav{
+    background-color:var(--secondary-color) ;
+    width:100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0px 5px 0px rgba(0, 0, 0);
+}
+.navBtn{
+    height: 100%;
+    display:inline;
+    font-size:1.5rem;
+    color:var(--light-color);
+    padding:10px 20px;;
+}
+a{
+    text-decoration:none;
+    color: var(--light-color);
+}
+.navBtn:hover{
+    border-bottom:4px solid var(--light-color);
+}
+footer{
+    width:90%;
+    margin:0px auto;
+
+}
+.separator{
+    margin:20px 0px; 
+    display:block;
+    height:2px;
+    background-color: var(--secondary-color);
+    opacity: 80%;
+}
+.fBox{
+    display:flex;
+    flex-direction:row ;
+    align-items: center;
+    justify-content: space-between;
+}
+.socials a {
+    /* justify-content: end; */
+    padding-left:20px;
+    font-size: 1.5rem;
+}
+.main{
+    width:60%;
+    margin:0 auto;
+}
+.createBox{
+    background-color: var(--secondary-color);
+    display: flex;
+    flex-direction: column;
+}
+input[type="submit"]{
+    background-color: var(--secondary-color);
+    color:var(--light-color);
+    width:
+}
