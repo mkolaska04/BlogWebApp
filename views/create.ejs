@@ -1,13 +1,11 @@
 <%- include("partials/header.ejs") %>
 <div class="main">
 <h1>CREATE YOUR OWN NOTE</h1> 
-<div class="createBox">
-    <input name="title" type="text" class="feedback-input" placeholder="Title" />
-    <input name="description" type="text" class="feedback-input" placeholder="Description" />
-    <form action="upload.php" method="post">
-        <input type="file" name="file" id="file"/>
+    <form action="/create" method="post" enctype="multipart/form-data">
+        <input name="title" type="text" class="title input" placeholder="Title" />
+        <textarea name="text" class="description input" placeholder="Description"></textarea>
+        <input type="file" name="file" id="file" accept="image/png"/>
+        <input type="submit" value="SUBMIT" />
     </form>
-    <input type="submit" value="SUBMIT" />
-</div>
 </div>
 <%- include("partials/footer.ejs") %>

@@ -1,8 +1,10 @@
 :root {
     --main-bg-color: #1e1e24;
-    --primary-color: #49B6FF;
-    --secondary-color: #779BE7;
+    --primary-color: #779BE7;
     --light-color: #EADEDA;
+    --secondary-color:#2ECC71;
+    --option:#7209b7;
+
 }
   
 body{
@@ -10,12 +12,14 @@ body{
     background-color: var(--main-bg-color);
     color:var(--light-color);
 }
+
 .logo{
     padding:10px;
     font-size:1.8rem;
 }
 .nav{
-    background-color:var(--secondary-color) ;
+    position:static;
+    background-color:var(--primary-color) ;
     width:100%;
     display: flex;
     flex-direction: row;
@@ -28,7 +32,7 @@ body{
     display:inline;
     font-size:1.5rem;
     color:var(--light-color);
-    padding:10px 20px;;
+    padding:1rem;
 }
 a{
     text-decoration:none;
@@ -43,10 +47,10 @@ footer{
 
 }
 .separator{
-    margin:20px 0px; 
+    margin:80px 0px 20px; 
     display:block;
     height:2px;
-    background-color: var(--secondary-color);
+    background-color: var(--primary-color);
     opacity: 80%;
 }
 .fBox{
@@ -63,14 +67,67 @@ footer{
 .main{
     width:60%;
     margin:0 auto;
+}   
+h1{
+    margin:20px;
 }
-.createBox{
-    background-color: var(--secondary-color);
-    display: flex;
-    flex-direction: column;
+form{
+    background-color: var(--primary-color);
+    padding:20px 10%;
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    justify-self: center;
+    border-radius:8px ;
+}
+input, textarea{
+    margin:10px 0;  
+    border-radius: 8px;
+    box-shadow: 0px 5px 5px  rgba(0, 0, 0, 0.2);
+}
+form > .input {
+    background-color: var(--light-color);
+    padding:4px;
+    border:none;
+    width:100%;
+    font-size: 1.2rem;   
+}
+.description{
+    height:300px;
 }
 input[type="submit"]{
     background-color: var(--secondary-color);
+    border:2px solid var(--secondary-color);
     color:var(--light-color);
-    width:
+    font-size: 1.5rem;
+    align-self: flex-end;
+}
+input[type="file"]{
+    align-self: flex-start;
+    width:100%;
+    max-width: 350px;
+    font-size:1.2rem;
+    color:var(--main-bg-color);
+    background-color: var(--light-color);
+    text-shadow: 0 0 2px #fff;
+}
+input[type="text"]:nth-child(2) {
+    height: 300px;
+}
+
+
+@media(max-width: 991px) {
+    /* start of large tablet styles */
+}
+    
+@media (max-width: 767px) {
+    .main{
+        width:80%;
+    }
+}
+
+@media (max-width: 479px) {
+    .main{
+        width:90%;
+    }
 }
