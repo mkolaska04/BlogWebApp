@@ -2,15 +2,17 @@
 <div class="main">
     <h1>SEE ALL</h1> 
     <div class="'content>">
+     <%posts.reduceRight((acc,curr) => { %>
         <div class="title">
-            Title
+            <%=curr.title%>
         </div>
         <div class="description">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat ullam doloremque sequi dignissimos tenetur quia, sint temporibus, quasi est praesentium amet adipisci tempora veniam omnis consequuntur minus repudiandae dicta? Dignissimos!
+            <%=curr.description%>
         </div>
         <div class="image">
-
+            <img src="<%=curr.photo%>" width="200px">
         </div>
+     <%},[]) %>
     </div>
 </div>
 <%- include("partials/footer.ejs") %>

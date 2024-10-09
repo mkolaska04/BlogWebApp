@@ -2,8 +2,10 @@ import express from "express";
 import { dirname } from "path";
 import { fileURLToPath } from "url";
 import multer from 'multer';
+const upload = multer({ dest: 'public/uploads/' })
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const posts = [];
+const toRender = [] 
 const app = express();
 const port = 3000;
 app.use(express.static("public"))
@@ -19,16 +21,21 @@ app.get('/create', (req, res) => {
 })
 
 app.get("/notes", (req, res) => {
-    res.render("notes.ejs")
+    res.render("notes.ejs", {
+        posts: toRender
+    })
+    toRender = [];
 })
 
-app.post("/create", (req, res) => {
+app.post('/create',upload.single('image'),(req,res)=>{
     const { title, description } = req.body;
-    console.log(req.body.file)
-    posts.push({ title, description });
-    res.redirect("/notes")
-
+    const path = __dirname + "/public/uploads/" + req.file.filename
+    posts.push({ title: req.body.title, description: req.body.description, photo: path });
+    toRender.push({ title: req.body.title, description: req.body.description, photo: "uploads/" +  req.file.filename });
+    res.render("create.ejs")
+    console.log(posts)
 })
+
 
 
 

@@ -1,10 +1,9 @@
 :root {
     --main-bg-color: #1e1e24;
     --primary-color: #779BE7;
-    --light-color: #EADEDA;
+    --light-color: #f7f7f7;
     --secondary-color:#2ECC71;
     --option:#7209b7;
-
 }
   
 body{
@@ -18,29 +17,31 @@ body{
     font-size:1.8rem;
 }
 .nav{
-    position:static;
-    background-color:var(--primary-color) ;
-    width:100%;
+    top:0px;
+    position:fixed;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    width:100%;
+    background-color:var(--primary-color) ;   
     box-shadow: 0px 5px 0px rgba(0, 0, 0);
 }
 .navBtn{
-    height: 100%;
     display:inline;
+    height: 100%;
+    padding:1rem;
     font-size:1.5rem;
     color:var(--light-color);
-    padding:1rem;
+}
+.navBtn:hover{
+    border-bottom:4px solid var(--light-color);
 }
 a{
     text-decoration:none;
     color: var(--light-color);
 }
-.navBtn:hover{
-    border-bottom:4px solid var(--light-color);
-}
+
 footer{
     width:90%;
     margin:0px auto;
@@ -60,10 +61,11 @@ footer{
     justify-content: space-between;
 }
 .socials a {
-    /* justify-content: end; */
     padding-left:20px;
     font-size: 1.5rem;
 }
+
+
 .main{
     width:60%;
     margin:0 auto;
@@ -71,6 +73,7 @@ footer{
 h1{
     margin:20px;
 }
+/* CREATE */
 form{
     background-color: var(--primary-color);
     padding:20px 10%;
@@ -114,6 +117,10 @@ input[type="file"]{
 input[type="text"]:nth-child(2) {
     height: 300px;
 }
+/* MAIN */
+
+
+/* SEE ALL */
 
 
 @media(max-width: 991px) {
