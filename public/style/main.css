@@ -1,74 +1,13 @@
-:root {
-    --main-bg-color: #1e1e24;
-    --primary-color: #779BE7;
-    --light-color: #f7f7f7;
-    --secondary-color:#2ECC71;
-    --option:#7209b7;
-}
-  
+@import url("./variables.css");
 body{
     margin:0;
     background-color: var(--main-bg-color);
     color:var(--light-color);
 }
 
-.logo{
-    padding:10px;
-    font-size:1.8rem;
-}
-.nav{
-    top:0px;
-    position:fixed;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    width:100%;
-    background-color:var(--primary-color) ;   
-    box-shadow: 0px 5px 0px rgba(0, 0, 0);
-}
-.navBtn{
-    display:inline;
-    height: 100%;
-    padding:1rem;
-    font-size:1.5rem;
-    color:var(--light-color);
-}
-.navBtn:hover{
-    border-bottom:4px solid var(--light-color);
-}
-a{
-    text-decoration:none;
-    color: var(--light-color);
-}
-
-footer{
-    width:90%;
-    margin:0px auto;
-
-}
-.separator{
-    margin:80px 0px 20px; 
-    display:block;
-    height:2px;
-    background-color: var(--primary-color);
-    opacity: 80%;
-}
-.fBox{
-    display:flex;
-    flex-direction:row ;
-    align-items: center;
-    justify-content: space-between;
-}
-.socials a {
-    padding-left:20px;
-    font-size: 1.5rem;
-}
-
-
 .main{
     width:60%;
-    margin:0 auto;
+    margin:6rem auto 0px;
 }   
 h1{
     margin:20px;
@@ -130,11 +69,13 @@ input[type="text"]:nth-child(2) {
 @media (max-width: 767px) {
     .main{
         width:80%;
+        margin:6rem auto 0px;
     }
 }
 
 @media (max-width: 479px) {
     .main{
         width:90%;
+        margin:8rem auto 0px;
     }
 }
