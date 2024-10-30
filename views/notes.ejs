@@ -1,18 +1,32 @@
 <%- include("partials/header.ejs") %>
-<div class="main">
-    <h1>SEE ALL</h1> 
-    <div class="'content>">
-     <%posts.reduceRight((acc,curr) => { %>
-        <div class="title">
-            <%=curr.title%>
+    <div class="main">
+        <h1>See all</h1>
+        <div class="'content>">
+            <% if (posts.length===0) {%>
+                <div class ="if-not-created">You haven't posted anything yet. Click "Create new note" and create your first note</div>
+            <%}%>
+            <%posts.reduceRight((acc,curr)=> { %>
+
+                <% if (curr.title!==undefined) { %>
+                    <div class="note-title">
+                        <%=curr.title%>
+                    </div>
+                    <%}%>
+                    <div class="note-content">
+
+                        <% if (curr.description!==undefined) { %>
+                            <div class="note-description">
+                                <%=curr.description%>
+                            </div>
+                        <%}%>
+
+                        <% if (curr.photo!==undefined) { %>
+                            <img src="<%=curr.photo%>">
+                        <%}%>
+
+                    </div>
+
+                <%},[]) %>
         </div>
-        <div class="description">
-            <%=curr.description%>
-        </div>
-        <div class="image">
-            <img src="<%=curr.photo%>" width="200px">
-        </div>
-     <%},[]) %>
     </div>
-</div>
-<%- include("partials/footer.ejs") %>
+    <%- include("partials/footer.ejs") %>

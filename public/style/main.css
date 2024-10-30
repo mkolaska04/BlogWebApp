@@ -3,6 +3,9 @@ body{
     margin:0;
     background-color: var(--main-bg-color);
     color:var(--light-color);
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .main{
@@ -57,12 +60,82 @@ input[type="text"]:nth-child(2) {
     height: 300px;
 }
 /* MAIN */
-
+.content{
+    font-size: 1.8rem;
+    display:flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 20px;
+}
+.page-des{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2rem 0;
+}
+.content i {
+    filter:drop-shadow(0px 5px 5px black);
+    font-size: 8rem;
+    color: var(--secondary-color);
+    margin: 1rem 2rem;
+}
 
 /* SEE ALL */
-
+.if-not-created{
+    font-size:2rem;
+    height:60vh;
+}
+h1{
+    font-family: "Pacifico", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+.note-title{
+    font-size:2.5rem;
+    color: var(--secondary-color);
+    margin:10px 20px;
+}
+.note-content{
+    background-color: var(--primary-color);
+    padding:2rem;
+    display:flex ;
+    flex-direction: row;
+    justify-content: space-evenly;
+    border-radius:8px;
+}
+.note-content img {
+    max-width:48%;
+    height: auto;
+    justify-self: center;
+    object-fit: contain;
+    filter:drop-shadow(0px 5px 5px rgba(0, 0, 0, 0.2));
+}
+.note-description{
+    word-wrap: break-word;
+    width:50%;
+    background-color: var(--light-color);
+    color: var(--main-bg-color);
+    padding:1rem;
+    margin-right:1.5rem;
+    font-size: 1.3rem;
+    border-radius: 8px;
+    box-shadow: 0px 5px 5px  rgba(0, 0, 0, 0.2);
+}
 
 @media(max-width: 991px) {
+    .note-content{
+        flex-direction: column;
+    }
+    .note-description{
+        margin: 1rem 0;
+    }
+    .note-content img {
+        max-width: none;
+        width: 100%;
+    }
     /* start of large tablet styles */
 }
     
@@ -71,11 +144,31 @@ input[type="text"]:nth-child(2) {
         width:80%;
         margin:6rem auto 0px;
     }
+    .note-content{
+        flex-direction: column;
+    }
+    .note-description{
+        margin: 1rem 0;
+    }
+    .note-content img {
+        max-width: none;
+        width: 100%;
+    }
 }
 
 @media (max-width: 479px) {
     .main{
         width:90%;
         margin:8rem auto 0px;
+    }
+    .note-content{
+        flex-direction: column;
+    }
+    .note-description{
+        margin: 1rem 0;
+    }
+    .note-content img {
+        max-width: none;
+        width: 100%;
     }
 }
